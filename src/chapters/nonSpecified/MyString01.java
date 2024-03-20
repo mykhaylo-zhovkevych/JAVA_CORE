@@ -1,4 +1,4 @@
-package chapters.ch_03;
+package chapters.nonSpecified;
 
 public class MyString01 {
     private final char[] value;

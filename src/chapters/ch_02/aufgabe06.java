@@ -1,5 +1,3 @@
-
-
 import java.util.Scanner;
 
 public class aufgabe06 {
@@ -29,13 +27,9 @@ static boolean Armstrong(int n){
         return false;
     }
     
-    return false;
-    
-    
+    return false; 
 
 
 }
-
-
 }
  

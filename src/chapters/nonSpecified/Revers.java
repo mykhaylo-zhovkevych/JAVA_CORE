@@ -1,4 +1,4 @@
-package chapters.ch_03;
+package chapters.nonSpecified;
 
 public class Revers {
     public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Revers {
 /*
     Step 1: Extract last digit (rem = 123 % 10 = 3)
         num becomes 123 / 10 = 12
-In the context of reversing a number, this operation effectively removes the last digit from num, leaving the remaining digits for the next iteration of the loop to process.
+    In the context of reversing a number, this operation effectively removes the last digit from num, leaving the remaining digits for the next iteration of the loop to process.
     Step 2: Building the reversed number (ans = 0 * 10 + 3 = 3)
     Step 3: Extract last digit (rem = 12 % 10 = 2)
         num becomes 12 / 10 = 1

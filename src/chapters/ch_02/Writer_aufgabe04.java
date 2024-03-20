@@ -1,8 +1,6 @@
-
-
 import java.io.*;
 // an array named list and a file named output.txt. Here, we are trying to read data from the array and storing to the file.
-public class aufgabe04 {
+public class Writer_aufgabe04 {
     
         // create an integer array
         private int[] list = { 5, 6, 8, 9, 2 };
@@ -48,7 +46,7 @@ public class aufgabe04 {
     
     class Main {
         public static void main(String[] args) {
-            aufgabe04 list = new aufgabe04(); // can be bypassed if  the list is static 
+            Writer_aufgabe04 list = new Writer_aufgabe04(); // can be bypassed if  the list is static 
             list.writeList();
         
         }

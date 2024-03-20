@@ -1,5 +1,3 @@
-
-
 public class aufgabe05 {
 
     static class Employee {
