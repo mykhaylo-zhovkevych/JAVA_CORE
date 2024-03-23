@@ -2,23 +2,39 @@
 <web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
 
 <servlet>
-<servlet-name>abc</servlet-name>
-<servlet-class>com.mz.AddServlet</servlet-class>
+    <servlet-name>abc</servlet-name>
+    <servlet-class>com.mz.AddServlet</servlet-class>
 </servlet>
-
 <servlet-mapping>
-<servlet-name>abc</servlet-name>
-<url-pattern>/add</url-pattern>
+    <servlet-name>abc</servlet-name>
+    <url-pattern>/add</url-pattern>
 </servlet-mapping>
 
 <servlet>
-<servlet-name>pqr</servlet-name>
-<servlet-class>com.mz.SqServlet</servlet-class>
+    <servlet-name>flq</servlet-name>
+    <servlet-class>com.mz.AddServletSession</servlet-class>
 </servlet>
-
 <servlet-mapping>
-<servlet-name>pqr</servlet-name>
-<url-pattern>/sq</url-pattern>
+    <servlet-name>flq</servlet-name>
+    <url-pattern>/addSession</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>pqr</servlet-name>
+    <servlet-class>com.mz.SqServlet</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>pqr</servlet-name>
+    <url-pattern>/sq</url-pattern>
+</servlet-mapping>
+
+<servlet>
+    <servlet-name>olp</servlet-name>
+    <servlet-class>com.mz.SqServletSession</servlet-class>
+</servlet>
+<servlet-mapping>
+    <servlet-name>olp</servlet-name>
+    <url-pattern>/sqSession</url-pattern>
 </servlet-mapping>
 
 </web-app>
