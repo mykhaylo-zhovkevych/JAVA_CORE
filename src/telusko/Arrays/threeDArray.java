@@ -1,4 +1,4 @@
-package telusko;
+package telusko.Arrays;
 
 public class threeDArray {
     public static void main(String[] args) {

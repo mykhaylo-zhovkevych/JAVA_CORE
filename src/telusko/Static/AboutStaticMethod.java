@@ -1,4 +1,7 @@
-package telusko;
+package telusko.Static;
+
+import telusko.Static.Phone;
+
 class Phone {
     // instance variables
     String brand;

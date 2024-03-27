@@ -1,4 +1,4 @@
-package telusko;
+package telusko.Arrays;
 
 public class multiDimensionalArray {
     

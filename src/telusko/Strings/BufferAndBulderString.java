@@ -1,4 +1,4 @@
-package telusko;
+package telusko.Strings;
 
 public class BufferAndBulderString {
     
