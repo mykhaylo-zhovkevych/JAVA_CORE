@@ -1,0 +1,27 @@
+AddServlet
+
+    Role: The AddServlet takes two numbers as input (parameters num1 and num2), adds them together, and then redirects the client to the SqServlet, appending the result of the addition (k) as a query parameter in the URL.
+
+    Key Methods:
+        doGet(HttpServletRequest req, HttpServletResponse res): This method is invoked when an HTTP GET request is made to the servlet. It reads parameters num1 and num2 from the request, adds them, and then redirects the client to SqServlet using the res.sendRedirect("sq?k="+k); method, passing the sum as a query parameter k.
+
+SqServlet
+
+    Role: The SqServlet retrieves the result (k) passed by the AddServlet via query parameters, squares it, and then writes the result back to the client.
+
+    Key Methods:
+        doGet(HttpServletRequest req, HttpServletResponse res): Similar to AddServlet, this method is called upon receiving an HTTP GET request. It retrieves the parameter k, squares it, and then uses a PrintWriter obtained from the HttpServletResponse to send the square of k back to the client.
+
+Web Deployment Descriptor (web.xml)
+
+    This XML file is used to configure servlets, servlet mappings, and other web application parameters in a standard way, regardless of where the application is hosted.
+
+    It defines two servlets (AddServlet and SqServlet) and maps them to the URLs /add and /sq, respectively. This means that when a client makes a request to <your_domain>/add, the AddServlet is invoked, and similarly, a request to <your_domain>/sq invokes the SqServlet.
+
+Communication Type
+
+    The communication between AddServlet and SqServlet is done using URL redirection and query parameters, a common way to pass data between pages in web applications. This method is stateless; the state is not preserved by the server between requests. Instead, any needed data is included in the URL as query parameters.
+
+    This approach does not utilize HTTP sessions or cookies to store or pass data. Instead, it relies on the client (web browser) to follow the redirect and make a new request to the SqServlet URL with the included query parameters.
+
+This example demonstrates a simple way to perform inter-servlet communication and how to manipulate data using servlets. However, for more complex scenarios or when you need to preserve state across multiple requests, you might use sessions or cookies. Sessions allow you to store objects and data on the server associated with a client's session, while cookies can store data on the client's machine to be sent with subsequent requests to the server.
