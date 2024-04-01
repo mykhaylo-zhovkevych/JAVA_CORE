@@ -1,8 +1,5 @@
 package telusko.Static;
 
-/**
- * InneraboutStatic
- */
  class Phone {
     // instance variables 
     String brand;
@@ -34,3 +31,11 @@ public class aboutStatic {
         obj2.show();
     }
 }
+/*
+Der static Modifier in Java wurde entwickelt, um Elemente 
+(Methoden, Variablen, Blöcke und verschachtelte Klassen) zu definieren, 
+die zur Klasse selbst gehören, statt zu Instanzen der Klasse. Das bedeutet, dass diese Elemente 
+ohne eine Instanz der Klasse, zu der sie gehören, zugänglich und nutzbar sind. Hier sind einige 
+Schlüsselaspekte und Gründe für die Entwicklung und Verwendung von static in Java
+ * 
+ */
