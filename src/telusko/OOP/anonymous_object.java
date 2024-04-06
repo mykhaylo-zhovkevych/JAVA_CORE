@@ -12,7 +12,7 @@ public class anonymous_object {
 
         A obj; // this called reference creation 
         obj = new A(); // creation of instacne ( new A()) and assignment of the value to obj
-         new A(); // this type of object is called anonymous object. One problem that this object will go to the heap and than the quesion arrise how this objet will be reused if he is not having any reference 
+        new A(); // this type of object is called anonymous object. One problem that this object will go to the heap and than the quesion arrise how this objet will be reused if he is not having any reference 
 
         obj.show();
         
