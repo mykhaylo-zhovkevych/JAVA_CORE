@@ -14,6 +14,7 @@ public class Functional_Interface {
 //                System.out.println("in show");
 //            }
 //        };
+// this lambda will not create class behind the scenes but he class Functional_Interface will be larger in the saze
         A obj = (int i) -> System.out.print("this is show and in lambda expression " + i);
         obj.show(5);    
         
