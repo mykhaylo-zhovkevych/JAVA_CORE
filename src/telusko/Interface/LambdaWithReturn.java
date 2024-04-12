@@ -54,8 +54,8 @@ public static void main(String[] args) {
     
     public class LambdaWithReturn {
     public static void main(String[] args) {
-        A obj = (int i, int j) -> i + j;
-            
+
+        A obj = (i, j) -> i + j;    
         
         int result = obj.add(4, 3);
         System.out.print(result);
