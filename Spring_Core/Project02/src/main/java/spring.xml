@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+	<!--<bean id="alien" class="com.mz.project02.Alien" scope="singleton"></bean>-->
+	<!--<bean id="alien" class="com.mz.project02.Alien" scope="prototype"></bean>-->
+	<!-- the prototype will not create the object automatically as the singleton if needed it must be requested -->
+	 
+	 <bean id="alien" class="com.mz.project02.Alien" scope="singleton" autowire="byType"> 
+	 <!-- this byName will look at the code and see like the com is written so it will check the xml and try to connect it and byName requires a bean to function-->
+	 <!-- if i use more than one bean this byTape will give me a error so to make this working i mast give priority at least to one like primary="true"-->
+	 
+	 
+	 <!-- passed the values by setters -->
+	 <property name="age" value="10"></property>
+	  </bean>
+	  
+	 <!--  this runs now by the constructor and i must say explicitly that is must use the Parameterized Constructor and not the default one -->
+	 <!-- <constructor-arg value="12"></constructor-arg> -->
+	 
+	 <!-- <property name="com" ref="laptop"></property></bean> -->
+	 
+	 <!-- value will work for the primitive but for reference object not really -->
+	 <!-- if i want to work with the another class i need to create a bean  -->
+	 
+	 <bean id="com" class="com.mz.project02.Laptop" primary="true"> </bean> 
+	 <bean id="desktop" class="com.mz.project02.Desktop"> </bean>
+	 
+</beans>
