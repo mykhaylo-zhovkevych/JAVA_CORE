@@ -1,0 +1,27 @@
+00:00:00 Intro to Spring and Microservices Course ==> Project01
+00:02:12 Spring Framework ==> Project02
+01:22:55 Spring JDBC ==> Project03
+01:52:22 Spring MVC ==> Project04
+03:17:42 Spring ORM Theory ==>  
+03:48:48 Spring Data JPA  
+04:17:16 Rest using Spring Boot
+04:55:30 Project Using Spring Boot MVC  
+07:23:43 Spring Boot Mongodb Full Project  
+08:39:05 Spring AOP  
+08:59:58 Spring security
+10:06:32 What are Microservices  
+10:15:20 What is Cloud Computing  
+10:30:29 What is Blue Green Deployment  
+10:37:06 Cloud Native vs Cloud Ready  
+10:54:36 Monolithic Project  
+12:36:01 Building Microservices Introduction  
+12:45:02 Creating a Question Service  
+13:10:48 Running the Question Service  
+13:22:04 Creating a Quiz Service  
+13:30:53 Need of Eureka Server  
+13:42:13 Creating a Service Registry  
+13:51:23 Working with Feign  
+14:02:35 Microservice is calling a Microservice  
+14:06:54 Completing the 2 Microservices  
+14:16:51 Load Balancing  
+14:22:49 Api Gateway
