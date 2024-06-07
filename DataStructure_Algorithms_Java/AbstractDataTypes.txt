@@ -1,0 +1,60 @@
+Algorithms are step-by-step instructions or rules designed to solve a specific problem or perform a task.
+
+Data Structures are ways to organize and store data so that it can be used efficiently. Imagine a data structure as a container that holds your data in a specific way.
+
+Algorithms
+
+    Sorting Algorithms
+        Bubble Sort: A simple comparison-based algorithm where each pair of adjacent elements is compared and swapped if they are in the wrong order.
+        Selection Sort: Finds the minimum element from the unsorted part and puts it at the beginning.
+        Insertion Sort: Builds the final sorted array one item at a time.
+        Merge Sort: A divide-and-conquer algorithm that divides the array into halves, sorts them, and merges them back together.
+        Quick Sort: Also a divide-and-conquer algorithm that selects a 'pivot' element and partitions the array around the pivot.
+        Heap Sort: Converts the array into a heap data structure and then repeatedly extracts the maximum element from the heap.
+
+    Search Algorithms
+        Linear Search: Sequentially checks each element of the list until the target element is found or the list ends.
+        Binary Search: Efficiently searches a sorted array by repeatedly dividing the search interval in half.
+
+    Graph Algorithms
+        Breadth-First Search (BFS): Explores nodes layer by layer starting from the root.
+        Depth-First Search (DFS): Explores as far as possible along each branch before backtracking.
+        Dijkstra's Algorithm: Finds the shortest path between nodes in a graph.
+        A Search Algorithm*: Finds the shortest path between two nodes using heuristics to improve efficiency.
+        Kruskal's Algorithm: Finds the minimum spanning tree for a connected weighted graph.
+        Prim's Algorithm: Also finds the minimum spanning tree, but grows the tree from a starting node.
+
+    Dynamic Programming
+        Fibonacci Sequence: Computes the nth Fibonacci number efficiently using memoization.
+        Knapsack Problem: Solves the problem of selecting a subset of items to maximize the total value without exceeding the capacity.
+        Longest Common Subsequence: Finds the longest subsequence common to two sequences.
+
+    Greedy Algorithms
+        Activity Selection: Selects the maximum number of activities that don't overlap.
+        Huffman Coding: Constructs an optimal prefix code for a set of symbols with given frequencies.
+
+
+Data Structures
+
+    Array: A collection of elements identified by index or key.
+    Linked List
+        Singly Linked List: Each node points to the next node.
+        Doubly Linked List: Each node points to both the next and previous nodes.
+    Stack: A collection of elements with Last In, First Out (LIFO) access.
+    Queue: A collection of elements with First In, First Out (FIFO) access.
+        Priority Queue: Each element has a priority, and elements are served according to their priority.
+    Hash Table: A data structure that maps keys to values for highly efficient lookup.
+    Heap: A specialized tree-based structure that satisfies the heap property.
+        Min-Heap: The parent node is less than or equal to its children.
+        Max-Heap: The parent node is greater than or equal to its children.
+    Tree
+        Binary Tree: Each node has at most two children.
+        Binary Search Tree (BST): A binary tree where each node has a key, and keys in the left subtree are less, and in the right subtree are greater.
+        Balanced Trees: Such as AVL trees and Red-Black trees, which maintain their balance to ensure O(log n) operations.
+        Trie: A tree-like data structure that stores a dynamic set of strings.
+    Graph: A collection of nodes connected by edges.
+        Directed Graph (Digraph): Edges have a direction.
+        Undirected Graph: Edges don't have a direction.
+        Weighted Graph: Edges have weights.
+
+These are foundational algorithms and data structures used for efficient data manipulation and problem-solving in various computational tasks.

@@ -1,0 +1,26 @@
+Time complexity is a computational concept used to describe the amount of time an algorithm takes to complete as a function of the size of its input. 
+It provides an upper bound on the running time, helping us understand how the running time grows with the input size. 
+Time complexity is typically expressed using Big O notation, which gives an upper bound on the time an algorithm takes in the worst-case scenario.
+
+The common time complexities are:
+
+    Constant Time - O(1): The algorithm takes a fixed amount of time regardless of the input size.
+    Logarithmic Time - O(log n): The running time grows logarithmically with the input size.
+    Linear Time - O(n): The running time grows linearly with the input size.
+    Linearithmic Time - O(n log n): The running time grows linearly with a logarithmic factor.
+    Quadratic Time - O(n^2): The running time grows quadratically with the input size.
+    Cubic Time - O(n^3): The running time grows cubically with the input size.
+    Exponential Time - O(2^n): The running time grows exponentially with the input size.
+
+In the picture you provided, two terms are highlighted:
+
+    Space Complexity: This refers to the amount of memory an algorithm uses as a function of the size of its input. 
+    Less memory usage is typically desirable, as it indicates a more efficient algorithm in terms of storage.
+
+    Time Complexity: This term is concerns about the amount of time an algorithm takes to run, 
+    which is crucial for understanding its efficiency and scalability.
+
+
+
+In summary, while space complexity focuses on memory usage, time complexity focuses on the speed of an algorithm. 
+Both are essential for evaluating and comparing the efficiency of algorithms.
