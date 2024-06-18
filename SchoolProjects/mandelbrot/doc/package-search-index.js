@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"Alle Packages","u":"allpackages-index.html"},{"l":"oop.mandelbrot.coordinate"}];updateSearchResults();
