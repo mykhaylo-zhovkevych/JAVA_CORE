@@ -137,11 +137,60 @@ public class summary {
     !!! Die find()-Methode wird in Verbindung mit einem Matcher-Objekt verwendet, das aus einem Pattern-Objekt erstellt wurde.
 
 
+    z.B: 
+    for (char zeichen : sequenceDNA.toCharArray()) {
+        if ("ATGC".indexOf(zeichen) == -1) return false;
+    }
+    Erklärung: Der Sequence-DNA-String wird in ein Char-Array umgewandelt, das aus den Zeichen A, T, G oder C besteht. 
+    Mit einer For-Each-Schleife, die über jedes Zeichen im Array iteriert, wird jedes Zeichen überprüft.
+    Das Char-Array wird auf die Zeichen ATGC überprüft, und jeder korrekte Buchstabe bekommt eine Zahl. 
+    Wenn es ein anderer Buchstabe ist, wird -1 zurückgegeben, was als falsch gewertet wird.
+
+
+
+
     //9.
     indexOf(int ch):
 
-    
+    indexOf() Methode in der Klasse String
+    //Die Methode indexOf() in der Klasse String wird verwendet, 
+    //um den Index eines bestimmten Zeichens oder einer Teilzeichenkette in einer Zeichenkette zu finden. Es gibt mehrere Überladungen dieser Methode.
 
+    Signaturen
+
+
+    Zeichen suchen:
+    public int indexOf(int ch)
+    Parameter: ch - das zu suchende Zeichen (als int, weil Zeichen in Java intern als int dargestellt werden).
+    Rückgabewert: Der Index des ersten Vorkommens des Zeichens oder -1, wenn das Zeichen nicht gefunden wird.
+    
+    
+    Zeichen suchen ab einem bestimmten Index:
+
+    public int indexOf(int ch, int fromIndex)
+    Parameter:
+    ch - das zu suchende Zeichen.
+    fromIndex - der Index, ab dem die Suche beginnt.
+    Rückgabewert: Der Index des ersten Vorkommens des Zeichens nach dem angegebenen Index oder -1, wenn das Zeichen nicht gefunden wird.
+    
+    
+    Teilzeichenkette suchen:
+
+    public int indexOf(String str)
+    Parameter: str - die zu suchende Teilzeichenkette.
+    Rückgabewert: Der Index des ersten Vorkommens der Teilzeichenkette oder -1, wenn die Teilzeichenkette nicht gefunden wird.
+    
+    
+    Teilzeichenkette suchen ab einem bestimmten Index:
+
+    public int indexOf(String str, int fromIndex)
+    Parameter:
+    str - die zu suchende Teilzeichenkette.
+    fromIndex - der Index, ab dem die Suche beginnt.
+    Rückgabewert: Der Index des ersten Vorkommens der Teilzeichenkette nach dem angegebenen Index oder -1, wenn die Teilzeichenkette nicht gefunden wird.
+
+    //10.
+    toCharArray():
 
 
 
