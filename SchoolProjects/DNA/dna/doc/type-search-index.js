@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"Alle Klassen und Schnittstellen","u":"allclasses-index.html"},{"p":"dna","l":"Laboratory"},{"p":"dna","l":"Library"},{"p":"dna","l":"Main"},{"p":"dna","l":"Report"},{"p":"dna","l":"Sequence"},{"p":"dna","l":"Worker"}];updateSearchResults();
