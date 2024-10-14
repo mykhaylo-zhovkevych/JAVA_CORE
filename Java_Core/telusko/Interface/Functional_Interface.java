@@ -1,5 +1,10 @@
 package telusko.Interface;
 
+/*
+a functional interface is defined as an interface with only one abstract method 
+(also known as a Single Abstract Method (SAM) interface). 
+This is the fundamental characteristic that enables the interface to be used in lambda expressions, method references, and functional-style programming.
+*/
 // by doing this i make sure that i have only one method here 
 @FunctionalInterface 
 interface A {
