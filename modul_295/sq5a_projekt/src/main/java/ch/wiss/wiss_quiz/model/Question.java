@@ -32,6 +32,8 @@ public class Question {
 	private Category category;
 
 	@OneToMany(mappedBy = "question", cascade = CascadeType.ALL)
+	// Neue Validierung für zweite Teile von QuestionControllerTest
+	@NotEmpty(message = "At least one answer is required") 
 	@Size(min = 3, max = 3, message = "There need to be 3 answers to a question")
 	private List<Answer> answers = new ArrayList<>();
 

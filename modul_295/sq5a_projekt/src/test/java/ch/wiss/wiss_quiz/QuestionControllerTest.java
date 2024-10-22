@@ -102,6 +102,21 @@ public class QuestionControllerTest {
 
     // teil02 
 
+    @Test
+    public void whenPostRequestToQuestionAndInValidQuestion_thenCorrectResponse() throws Exception {
+    // Frage-JSON String ohne Frage und ohne Antworten erstellen
+    String question = "{\"question\": null }";
     
+    // führt POST-Request mit unvollständiger Frage aus  
+    mockMvc.perform(MockMvcRequestBuilders.post("/question/1")
+            .content(question)
+            .contentType(MediaType.APPLICATION_JSON))
+            // teste, ob Systemantwort korrekt ist
+            .andExpect(MockMvcResultMatchers.status().isBadRequest())
+            // teste erwartete Fehlermeldungen 
+            .andExpect(MockMvcResultMatchers.jsonPath("$.question").value("Question is mandatory"))
+            .andExpect(MockMvcResultMatchers.jsonPath("$.answers").value("There need to be 3 answers to a question"))
+            .andExpect(MockMvcResultMatchers.content().contentType(MediaType.APPLICATION_JSON));
+}
 
 }
