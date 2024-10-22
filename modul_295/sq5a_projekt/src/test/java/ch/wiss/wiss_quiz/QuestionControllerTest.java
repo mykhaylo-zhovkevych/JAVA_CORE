@@ -1,6 +1,7 @@
 package ch.wiss.wiss_quiz;
 
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.when;
 
 
@@ -39,6 +40,7 @@ public class QuestionControllerTest {
 
     @Autowired private MockMvc mockMvc;
 
+    // teil01
 
     @Test
     public void whenQuestionControllerInjected_thenNotNull() throws Exception {
@@ -63,28 +65,43 @@ public class QuestionControllerTest {
 
     }
 
+    // Test für die korrekte Dateneingabe (POST /question/{cat_id})
     @Test
     public void whenPostNewQuestions_withValidData_thenResponseOk() throws Exception {
-    // Set up category and mock repository behavior
+   
     Category category = new Category();
     category.setId(1);
     category.setName("Test Kategorie");
 
     when(categoryRepository.findById(1)).thenReturn(Optional.of(category));
+    
+    // JSON-String mit drei Antworten erstellen
+    String questionJson = "{\"question\":\"Was ist das, mein Freund\", \"answers\":[{\"answer\":\"Antwort 1\"}, {\"answer\":\"Antwort 2\"}, {\"answer\":\"Antwort 3\"}]}";
 
-    // Create valid question JSON
-    String questionJson = "{\"question\":\"Was ist das, mein Freund\", \"answers\":[{\"answer\":\"Antwort 1\"}, {\"answer\":\"Antwort 2\"}]}";
-
-    // Perform the POST request with valid data
     mockMvc.perform(MockMvcRequestBuilders.post("/question/1")
                     .contentType(MediaType.APPLICATION_JSON)
                     .content(questionJson))
-            .andExpect(MockMvcResultMatchers.status().isOk() )
-            .andExpect(MockMvcResultMatchers.content().string("Saved"));
+                    .andExpect(MockMvcResultMatchers.status().isOk())
+                    .andExpect(MockMvcResultMatchers.content().string("Saved"));
 }
 
+    // Test für das Löschen von Fragen (DELETE /question/{id})
+    @Test
+    public void whenDeleteQuestion_thenResponseOk() throws Exception {
+        // Mock eine existierende Frage
+        Question question = new Question();
+        question.setId(1);
 
+        when(questionRepository.findById(1)).thenReturn(Optional.of(question));
+        doNothing().when(questionRepository).deleteById(1);
 
+        mockMvc.perform(MockMvcRequestBuilders.delete("/question/1"))
+                // gibt 405 weil so in src gemacht ist
+                .andExpect(MockMvcResultMatchers.status().isOk());
+    }
 
+    // teil02 
+
+    
 
 }
