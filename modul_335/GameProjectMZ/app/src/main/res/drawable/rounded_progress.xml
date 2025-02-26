@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Hintergrund (grauer Bereich) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="12dp"/>
+            <solid android:color="#CCCCCC"/> <!-- Hintergrundfarbe -->
+        </shape>
+    </item>
+
+    <!-- Vordergrund (fortschreitender Bereich) -->
+    <item android:id="@android:id/progress">
+        <clip>
+            <shape android:shape="rectangle">
+                <corners android:radius="12dp"/>
+                <solid android:color="#007aff"/> <!-- Fortschrittsfarbe -->
+            </shape>
+        </clip>
+    </item>
+</layer-list>
