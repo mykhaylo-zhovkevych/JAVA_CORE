@@ -1,7 +1,8 @@
 ## Die Dokumentation über MQ Block3: MQTT mit Java
 
-Erstellt von Mykhaylo Zhovkevych
-Abgaben Datum: 10.03.24
+*Erstellt von Mykhaylo Zhovkevych*
+
+*Abgaben Datum: 10.03.24*
 
 
 *Einleitung/ Thema*
@@ -31,8 +32,6 @@ Aufgabestellung 03B:
 -  Teste die korrekte Funktionalität deines Java-Programms, indem du mit einem zeitlichen Abstand in mehreren Terminals Java-Sensoren mit unterschiedlichen PUB-Topics startest.
 - Die Daten visualisierst du z.B. mit Grafana. Das Ergebnis könnte z.B. so aussehen:
 
-
-![alt text](<Screenshot 2025-03-06 195904.png>)
 
 
 
@@ -107,7 +106,7 @@ public class MqttSinusPublisher {
 Dann wenn ich ausführe diese Befehl: ` PS C:\Program Files\mosquitto> .\mosquitto_pub -h broker.hivemq.com -t "feedback/java1" -m "stop" `
 wird das Programm es erkennen und  das Programm stoppen.
 
-![[Screenshot 2025-03-06 195904.png]]
+![alt text](<Screenshot 2025-03-06 195904.png>)
 	"Diese Bild zeigt eine Visualisierung von Sinus"
 
 
