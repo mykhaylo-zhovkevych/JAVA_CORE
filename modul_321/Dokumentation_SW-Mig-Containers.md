@@ -1,4 +1,4 @@
-## Die Dokumentation über MQ Block3: Migration Strategie und die Containerisierung
+# Die Dokumentation über MQ Block3: Migration Strategie und die Containerisierung
 
 _Erstellt von Mykhaylo Zhovkevych_
 
@@ -7,14 +7,14 @@ _Abgaben Datum: 27.03.25_
 _Einleitung/ Thema_
 Diese Dokumentation beschreibt die ausgewählte Migrationsstrategie sowie die schrittweise Umsetzung der Migration von Mosquitto mit Containerisierung. Zusätzlich werden Verbesserungen am Java-Code erläutert.
 
-# Die ausgewählte Strategie
+## Die ausgewählte Strategie
 
 Für diesen Auftrag wurde die Cold Turkey (Big Bang)-Strategie gewählt, da ihre Vorteile die Nachteile überwiegen. Während der Projektumsetzung wurden jedoch einige kritische Fehler aufgedeckt, die während der Systemmigration entstanden sind.
 Nach der Behebung dieser Probleme kann das System schnell und einwandfrei eingesetzt werden.
 
-# Die Migrations Erklärung
+## Die Migrations Erklärung
 
-Hauptanforderungen
+Hauptanforderungen:
 
     1. Erstellung des Images
 
@@ -256,9 +256,9 @@ cos_publisher-1  | Gesendet an sensoren/cosinus: 0.5963474973911665
 ![Die Grafana Screenshot](<Screenshot 2025-03-27 114042.png>)
 _Die Werten werden aus irgendwelchen Grund falsch abgebilted, trotzdem dass es alles hat richtig letze Mal funktionert._
 
-# Testplan
+## Testplan
 
-## Testfälle
+### Testfälle
 
 | Testfall-ID | Tester-ID | Erwartetes Ergebnis                                                               | Tatsächliches Ergebnis                                                                              | Verbesserung/Optimierung                     |
 | ----------- | --------- | --------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- | -------------------------------------------- |
@@ -266,13 +266,13 @@ _Die Werten werden aus irgendwelchen Grund falsch abgebilted, trotzdem dass es a
 | TC-002      | T002      | Die tan, cos, sin wird richtig ausgerechnet                                       | Leider die Berechnung von Operationen falsche geschlagen                                            | Die Code Revesion, damit dem Problem beheben |
 | TC-003      | T003      | Die MQTT-Broker ist containerisiert und ist richtig konfiguriert                  | Ja, die MQTT-Broker lauft und kann die andere Sensoren per Umgebungsvariable akzeptieren            | Keine Optimierung ist benötigt               |
 | TC-004      | T004      | Die Grafana ist containerisiert und kann lokal abgerufen werden                   | Ja, man kann mithilfenvon Grafana die containerisierte Sensoren zugreifen und visualisieren         | Keine Verbesserung ist benötigt              |
-| TC-005      | T005      | Die Docker-Image ist erstellt und publiziert                                      | [Link zu DockeHub](https://hub.docker.com/repository/docker/mykhaylozhovkevych/my-java-app/general) | Keine Verbesserung ist benötigt              |
+| TC-005      | T005      | Die Docker-Image ist erstellt und publiziert                                      | [Link zu DockerHub](https://hub.docker.com/repository/docker/mykhaylozhovkevych/my-java-app/general) | Keine Verbesserung ist benötigt              |
 
-## Fehlerprotokoll
+### Fehlerprotokoll
 
 Bei die TC-002 hat eine logische Error, weil dort alle drei Threads in derselben Anwendung laufen, teilen sie sich denselben MQTT-Client. _Das bedeutet dass jeder Thread veröffentlicht nicht nur auf das eigene Topic, sondern scheinbar auf alle Topics_
 Eine mögliche Lösung wäre: Die richtige Topics: String pubTopic = "sensoren/" + function.toLowerCase(); setzen und jeder Publisher sendet nur an sein eigenes Topic. Keine doppelten oder falschen Einträge mehr.
 
-# Schlussfolderung
+## Schlussfolderung
 
-Nach meine Meinung die Migration war erfolgreich, es gab paar Unklarheiten bei Code ausführung und Contanesiering, aber alles könne recht schnell behoben werden, sodass die ganze System ist containerisiert.
+Meiner Meinung nach war die Migration erfolgreich. Es gab ein paar Unklarheiten bei der Code-Ausführung und Containerisierung, aber alles konnte recht schnell behoben werden, sodass das gesamte System containerisiert ist
