@@ -275,4 +275,4 @@ Eine mögliche Lösung wäre: Die richtige Topics: String pubTopic = "sensoren/"
 
 ## Schlussfolderung
 
-Meiner Meinung nach war die Migration erfolgreich. Es gab ein paar Unklarheiten bei der Code-Ausführung und Containerisierung, aber alles konnte recht schnell behoben werden, sodass das gesamte System containerisiert ist
+Meiner Meinung nach war die Migration erfolgreich. Es gab ein paar Unklarheiten bei der Code-Ausführung und Containerisierung, aber alles konnte recht schnell behoben werden, sodass das gesamte System containerisiert ist.
