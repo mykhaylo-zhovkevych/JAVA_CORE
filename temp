@@ -1,0 +1,35 @@
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NSubstitute;
+
+[TestClass]
+public class ApiProviderTests
+{
+    [TestMethod]
+    public async Task CreateUserAsync_CallsPostWithCorrectDto()
+    {
+        // Arrange
+        var http = Substitute.For<IHttpHelper>();
+
+        http.PostJsonAsync<UserResponseDto>(
+            Arg.Any<string>(),
+            Arg.Any<object>()
+        ).Returns(new HttpResult<UserResponseDto>
+        {
+            IsSuccess = true
+        });
+
+        var api = new ApiProvider(http);
+
+        // Act
+        await api.CreateUserAsync("Max", UserType.Admin);
+
+        // Assert ✅
+        await http.Received(1).PostJsonAsync<UserResponseDto>(
+            "http://localhost:5108/api/library/users",
+            Arg.Is<CreateUserDto>(dto =>
+                dto.Name == "Max" &&
+                dto.UserType == UserType.Admin
+            )
+        );
+    }
+}
